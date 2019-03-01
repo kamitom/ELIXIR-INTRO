@@ -11,7 +11,14 @@ defmodule M do
       x + 1
     end
   end
+
+  def sumMe([]), do: 0
+  def sumMe([h|t]), do: h + sumMe(t)
+
+
 end
 
 IO.inspect(M.loopTest())
 IO.inspect(M.loopTest2())
+
+IO.puts M.sumMe([1,2,3])

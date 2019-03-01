@@ -29,7 +29,7 @@ defmodule M do
 
   # string
   def data_string do
-    my_str = "My s0me strings here."
+    my_str = "my s0me strings here."
 
     longer_str = my_str <> " " <> " longer string here."
 
@@ -37,13 +37,22 @@ defmodule M do
 
     IO.puts("Equal : #{"EGG" === "egg"}")
 
-    # string contains "My" ?
-    IO.puts("My ? #{String.contains?(longer_str, "My")}")
+    # string contains "s0me" ?
+    IO.puts("s0me ? #{String.contains?(longer_str, "s0me")}")
 
     # first character
     IO.puts("First character : #{String.first(longer_str)}")
     # string index
     IO.puts("Index 4 : #{String.at(longer_str, 4)}")
     IO.puts("Substring : #{String.slice(longer_str, 4, 10)}")
+
+    IO.inspect(String.split(longer_str, " "))
+
+    IO.puts(String.reverse(longer_str))
+    IO.puts(String.upcase(longer_str))
+    IO.puts(String.downcase(longer_str))
+    IO.puts(String.capitalize(longer_str))
+
+    (3 * 10) |> IO.puts()
   end
 end
